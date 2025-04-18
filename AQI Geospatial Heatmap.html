@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_010700cc1b69365a25f5b7b50c89d3cd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+    <h3 align="center" style="font-size:16px"><b>Geospatial Distribution of Predicted AQI Categories</b></h3>
+    <p align="center" style="font-size:12px">Color Legend: Green (Good), Yellow (Moderate), Orange (Unhealthy for Sensitive Groups),
+    Red (Unhealthy), Purple (Very Unhealthy), Dark Red (Hazardous)</p>
+    
+            <div class="folium-map" id="map_010700cc1b69365a25f5b7b50c89d3cd" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_010700cc1b69365a25f5b7b50c89d3cd = L.map(
+                "map_010700cc1b69365a25f5b7b50c89d3cd",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b5697219d26ad6a4366852b033ac9857 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+            var circle_marker_cb41bf8bf0d382a45b7c745135c3df1e = L.circleMarker(
+                [28.7041, 77.1025],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8B0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_e00e5930ef53cb310f38d5798c0619a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_aabfec334be7d810a5851b0810438337 = $(`<div id="html_aabfec334be7d810a5851b0810438337" style="width: 100.0%; height: 100.0%;"><b>Delhi</b><br>AQI Category: Hazardous<br>PM2.5: 300</div>`)[0];
+            popup_e00e5930ef53cb310f38d5798c0619a1.setContent(html_aabfec334be7d810a5851b0810438337);
+        
+
+        circle_marker_cb41bf8bf0d382a45b7c745135c3df1e.bindPopup(popup_e00e5930ef53cb310f38d5798c0619a1)
+        ;
+
+        
+    
+    
+            var circle_marker_db06d5ad301f1033f9a861146f330ea4 = L.circleMarker(
+                [39.9042, 116.4074],
+                {"bubblingMouseEvents": true, "color": "#FF0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_ccad652341abc311ad3ec8c24e7d356f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_484ada613a31efd8d81500372ff1f87c = $(`<div id="html_484ada613a31efd8d81500372ff1f87c" style="width: 100.0%; height: 100.0%;"><b>Beijing</b><br>AQI Category: Unhealthy<br>PM2.5: 150</div>`)[0];
+            popup_ccad652341abc311ad3ec8c24e7d356f.setContent(html_484ada613a31efd8d81500372ff1f87c);
+        
+
+        circle_marker_db06d5ad301f1033f9a861146f330ea4.bindPopup(popup_ccad652341abc311ad3ec8c24e7d356f)
+        ;
+
+        
+    
+    
+            var circle_marker_03e9bef32872c9490ac04782bb04b2f0 = L.circleMarker(
+                [31.2304, 121.4737],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_19eaed0510445b4157d98d2a53f64cb1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a5b1ed46699d9b16d0844f288077f842 = $(`<div id="html_a5b1ed46699d9b16d0844f288077f842" style="width: 100.0%; height: 100.0%;"><b>Shanghai</b><br>AQI Category: Very Unhealthy<br>PM2.5: 200</div>`)[0];
+            popup_19eaed0510445b4157d98d2a53f64cb1.setContent(html_a5b1ed46699d9b16d0844f288077f842);
+        
+
+        circle_marker_03e9bef32872c9490ac04782bb04b2f0.bindPopup(popup_19eaed0510445b4157d98d2a53f64cb1)
+        ;
+
+        
+    
+    
+            var circle_marker_14094e4142c3589fcc5d6950d6390167 = L.circleMarker(
+                [34.0522, -118.2437],
+                {"bubblingMouseEvents": true, "color": "#FFFF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FFFF00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_adf487b68267ffc6ad28ad27b533765b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e902554cae86a801956a5b91bed4df2f = $(`<div id="html_e902554cae86a801956a5b91bed4df2f" style="width: 100.0%; height: 100.0%;"><b>Los Angeles</b><br>AQI Category: Moderate<br>PM2.5: 60</div>`)[0];
+            popup_adf487b68267ffc6ad28ad27b533765b.setContent(html_e902554cae86a801956a5b91bed4df2f);
+        
+
+        circle_marker_14094e4142c3589fcc5d6950d6390167.bindPopup(popup_adf487b68267ffc6ad28ad27b533765b)
+        ;
+
+        
+    
+    
+            var circle_marker_4acc8b151b5dcb79286eaac1a06b2bb1 = L.circleMarker(
+                [51.5074, -0.1278],
+                {"bubblingMouseEvents": true, "color": "#00FF00", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00FF00", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_5770948626dc3a334c11b03f97e9e2f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_50d64dfab957906fcdfb5630d04879b4 = $(`<div id="html_50d64dfab957906fcdfb5630d04879b4" style="width: 100.0%; height: 100.0%;"><b>London</b><br>AQI Category: Good<br>PM2.5: 40</div>`)[0];
+            popup_5770948626dc3a334c11b03f97e9e2f3.setContent(html_50d64dfab957906fcdfb5630d04879b4);
+        
+
+        circle_marker_4acc8b151b5dcb79286eaac1a06b2bb1.bindPopup(popup_5770948626dc3a334c11b03f97e9e2f3)
+        ;
+
+        
+    
+    
+            var circle_marker_21ada3681a374ff5a75733dcc703f591 = L.circleMarker(
+                [19.076, 72.8777],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#8B0000", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_0fa0e9e2d96c6936428e994c74140a5d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_27616c8f276fac5062c585ed4a009dee = $(`<div id="html_27616c8f276fac5062c585ed4a009dee" style="width: 100.0%; height: 100.0%;"><b>Mumbai</b><br>AQI Category: Hazardous<br>PM2.5: 280</div>`)[0];
+            popup_0fa0e9e2d96c6936428e994c74140a5d.setContent(html_27616c8f276fac5062c585ed4a009dee);
+        
+
+        circle_marker_21ada3681a374ff5a75733dcc703f591.bindPopup(popup_0fa0e9e2d96c6936428e994c74140a5d)
+        ;
+
+        
+    
+    
+            var circle_marker_a8999fa427348a58bc95f48d604e989f = L.circleMarker(
+                [24.8607, 67.0099],
+                {"bubblingMouseEvents": true, "color": "#800080", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#800080", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12, "stroke": true, "weight": 3}
+            ).addTo(map_010700cc1b69365a25f5b7b50c89d3cd);
+        
+    
+        var popup_81a7428e04d16da8d1beb7f1941028aa = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3fbaa49d49105bda5ec74cbdeeb74a0f = $(`<div id="html_3fbaa49d49105bda5ec74cbdeeb74a0f" style="width: 100.0%; height: 100.0%;"><b>Karachi</b><br>AQI Category: Very Unhealthy<br>PM2.5: 220</div>`)[0];
+            popup_81a7428e04d16da8d1beb7f1941028aa.setContent(html_3fbaa49d49105bda5ec74cbdeeb74a0f);
+        
+
+        circle_marker_a8999fa427348a58bc95f48d604e989f.bindPopup(popup_81a7428e04d16da8d1beb7f1941028aa)
+        ;
+
+        
+    
+</script>
+</html>
